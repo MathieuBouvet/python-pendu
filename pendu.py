@@ -13,6 +13,9 @@ def main(stdscr):
 	word = curses.newwin(5,screenWidth,30,0)
 	letters = curses.newwin(5,screenWidth,35,0)
 	feedback = curses.newwin(5,screenWidth,40,0)
+	
+	title.addstr(2,1,"PENDU".center(screenWidth))
+	letters.addstr(1,1, "Lettres essayées : ")
 
 	hang.border()
 	title.border()
@@ -26,9 +29,13 @@ def main(stdscr):
 	letters.refresh()
 	feedback.refresh()
 	
+
 	while True:
-		c = hang.getch()
-		hang.addstr("GAAAAAAAAAAAA")
-		title.addstr("GAAAAAAAAAAAA".center(40,str(curses.ACS_HLINE)[0]))
-		title.refresh()
+		c = letters.getch()
+		try:
+			letters.addstr(chr(c))
+		except ValueError:
+			feedback.addstr("error") 
+		letters.refresh()
+		feedback.refresh()
 wrapper(main)
