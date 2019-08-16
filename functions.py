@@ -9,3 +9,11 @@ def loadWord():
 
 def hiddenWord(word):
 	return "".join([ "_" for i in word])
+
+def displayHidden(word):
+	i = 0
+	hidden=""
+	while(i<len(word)):
+		hidden += word[i]+" "
+		i += 1
+	print(hidden)
