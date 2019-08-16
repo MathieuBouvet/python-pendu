@@ -6,3 +6,6 @@ NB_TRY = 8
 def loadWord():
 	# TODO : load word from file
 	return "test"
+
+def hiddenWord(word):
+	return " ".join([ "_" for i in word])
