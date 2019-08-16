@@ -17,3 +17,16 @@ def displayHidden(word):
 		hidden += word[i]+" "
 		i += 1
 	print(hidden)
+
+def letterIn(letter, word):
+	i = 0
+	indexes = []
+	found = False
+	while( i < len(word)):
+		if( letter == word[i]):
+			indexes.append(i)
+			found = True
+		i += 1
+	if ( not found):
+		indexes.append(-1)
+	return indexes
