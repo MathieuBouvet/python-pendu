@@ -2,3 +2,7 @@
 # -*-coding:Utf-8 -*
 
 NB_TRY = 8
+
+def loadWord():
+	# TODO : load word from file
+	return "test"
