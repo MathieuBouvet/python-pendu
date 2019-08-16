@@ -8,4 +8,4 @@ def loadWord():
 	return "test".upper()
 
 def hiddenWord(word):
-	return " ".join([ "_" for i in word])
+	return "".join([ "_" for i in word])
