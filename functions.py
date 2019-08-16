@@ -36,3 +36,15 @@ def getUpdatedHidden(hidden, letter, indexes):
 	for i in indexes:
 		lettersList[i] = letter
 	return "".join(lettersList)
+
+def getLetterInput(triedLetters):
+	letter = ""
+	readInputNextTime = True
+	while(readInputNextTime):
+		readInputNextTime = False
+		letter = input("Entrez une lettre : ")
+		if(len(letter) > 1 or ord(letter) < 65 or ord(letter) > 122 or letter.upper() in triedLetters):
+			readInputNextTime = True
+	return letter.upper()
+
+
