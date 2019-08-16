@@ -30,3 +30,9 @@ def letterIn(letter, word):
 	if ( not found):
 		indexes.append(-1)
 	return indexes
+
+def getUpdatedHidden(hidden, letter, indexes):
+	lettersList = [ letter for letter in hidden ]
+	for i in indexes:
+		lettersList[i] = letter
+	return "".join(lettersList)
