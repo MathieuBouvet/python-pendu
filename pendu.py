@@ -22,6 +22,6 @@ while(remainingTries > 0 and not wordDiscovered):
 		wordDiscovered = True
 	print("Lettres essayées : {0}. {1} tentative(s) restante(s)".format(", ".join(triedLetters), remainingTries))
 if(wordDiscovered):
-	print("Gagné ! ")
+	print("Gagné !")
 else:
 	print("perdu :(")
