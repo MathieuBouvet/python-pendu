@@ -15,7 +15,7 @@ def main(stdscr):
 	feedback = curses.newwin(5,screenWidth,40,0)
 	
 	title.addstr(2,1,"PENDU".center(screenWidth))
-	letters.addstr(1,1, "Lettres essayées : ")
+	letters.addstr(1,1, "Lettres essayées on essai: ")
 
 	hang.border()
 	title.border()
